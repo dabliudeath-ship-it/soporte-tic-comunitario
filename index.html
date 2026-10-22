@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,9 +11,11 @@
 <body>
     <header>
         <h1>Soporte TIC Comunitario</h1>
+
         <img src="Imagenes/mantenimiento.jpg"
              alt="Mantenimiento de computadores"
              class="imagen-principal">
+
         <p>Mantenimiento, tecnología y aprendizaje para todos</p>
     </header>
 
@@ -22,17 +24,20 @@
         <a href="#servicios">Servicios</a>
         <a href="#objetivos">Objetivos</a>
         <a href="#contacto">Contacto</a>
+        <a href="#acceso-administrativo">Administración</a>
     </nav>
 
     <main>
         <section id="inicio">
             <h2>Bienvenidos a nuestro proyecto</h2>
+
             <p>
                 Somos un proyecto de soporte técnico comunitario
                 enfocado en el mantenimiento preventivo y correctivo
                 de computadores y dispositivos tecnológicos en
                 Ciudad Bolívar, Bogotá.
             </p>
+
             <a class="boton" href="#servicios">
                 Conoce nuestros servicios
             </a>
@@ -44,23 +49,33 @@
             <div class="contenedor-servicios">
                 <div class="tarjeta">
                     <h3>🧹 Mantenimiento preventivo</h3>
-                    <p>Realizamos limpieza y revisión de los equipos para prevenir fallas.</p>
+                    <p>
+                        Realizamos limpieza y revisión de los equipos
+                        para prevenir fallas.
+                    </p>
                 </div>
 
                 <div class="tarjeta">
                     <h3>🔧 Diagnóstico y reparación</h3>
-                    <p>Identificamos problemas de hardware y software para buscar soluciones.</p>
+                    <p>
+                        Identificamos problemas de hardware y software
+                        para buscar soluciones.
+                    </p>
                 </div>
 
                 <div class="tarjeta">
                     <h3>💻 Optimización de equipos</h3>
-                    <p>Ayudamos a mejorar el rendimiento y funcionamiento de los computadores.</p>
+                    <p>
+                        Ayudamos a mejorar el rendimiento y
+                        funcionamiento de los computadores.
+                    </p>
                 </div>
             </div>
         </section>
 
         <section id="objetivos">
             <h2>Nuestro objetivo</h2>
+
             <p>
                 Brindar soporte técnico para mejorar el rendimiento
                 de los equipos, prolongar su vida útil y promover
@@ -72,69 +87,112 @@
             <h2>Contáctanos</h2>
             <p>¿Necesitas ayuda con tu computador? Escríbenos.</p>
 
-            <form class="formulario">
+            <form class="formulario" id="formulario-solicitud">
                 <label for="nombre">Nombre completo:</label>
                 <input type="text" id="nombre" name="nombre"
+                       maxlength="100"
                        placeholder="Escribe tu nombre" required>
 
                 <label for="correo">Correo electrónico:</label>
                 <input type="email" id="correo" name="correo"
+                       maxlength="254"
                        placeholder="ejemplo@correo.com" required>
 
                 <label for="servicio">Servicio que necesitas:</label>
                 <select id="servicio" name="servicio" required>
                     <option value="">Selecciona un servicio</option>
-                    <option>Mantenimiento preventivo</option>
-                    <option>Diagnóstico y reparación</option>
-                    <option>Optimización de equipos</option>
+                    <option value="Mantenimiento preventivo">
+                        Mantenimiento preventivo
+                    </option>
+                    <option value="Diagnóstico y reparación">
+                        Diagnóstico y reparación
+                    </option>
+                    <option value="Optimización de equipos">
+                        Optimización de equipos
+                    </option>
                 </select>
 
-                <label for="mensaje">Cuéntanos qué problema tienes:</label>
+                <label for="mensaje">
+                    Cuéntanos qué problema tienes:
+                </label>
+
                 <textarea id="mensaje" name="mensaje" rows="4"
-                          placeholder="Describe tu solicitud" required></textarea>
+                          maxlength="2000"
+                          placeholder="Describe tu solicitud"
+                          required></textarea>
 
                 <button type="submit">Enviar solicitud</button>
+
+                <p id="mensaje-formulario" role="status"
+                   aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section id="acceso-administrativo">
+            <h2>Acceso administrativo</h2>
+            <p>
+                Inicia sesión para consultar y administrar
+                las solicitudes de los clientes.
+            </p>
+
+            <form id="formulario-login" class="formulario">
+                <label for="correo-admin">
+                    Correo del administrador:
+                </label>
+
+                <input type="email" id="correo-admin"
+                       autocomplete="username"
+                       placeholder="Correo administrativo" required>
+
+                <label for="clave-admin">Contraseña:</label>
+
+                <input type="password" id="clave-admin"
+                       autocomplete="current-password"
+                       placeholder="Escribe tu contraseña" required>
+
+                <button type="submit">Iniciar sesión</button>
+
+                <p id="mensaje-login" role="status"
+                   aria-live="polite"></p>
             </form>
 
-            
-<section id="panel-administrativo">
-    <h2>Panel administrativo</h2>
-    <p>Consulta y administra las solicitudes de los clientes.</p>
+            <div id="panel-administrativo" hidden>
+                <h2>Panel administrativo</h2>
 
-    <div class="resumen-solicitudes">
-        <div class="resumen-tarjeta">
-            <h3>Total de solicitudes</h3>
-            <p id="total-solicitudes">0</p>
-        </div>
+                <button type="button" id="cerrar-sesion">
+                    Cerrar sesión
+                </button>
 
-        <div class="resumen-tarjeta pendiente">
-            <h3>Pendientes</h3>
-            <p id="total-pendientes">0</p>
-        </div>
+                <div class="resumen-solicitudes">
+                    <div class="resumen-tarjeta">
+                        <h3>Total de solicitudes</h3>
+                        <p id="total-solicitudes">0</p>
+                    </div>
 
-        <div class="resumen-tarjeta atendida">
-            <h3>Atendidas</h3>
-            <p id="total-atendidas">0</p>
-        </div>
-    </div>
+                    <div class="resumen-tarjeta pendiente">
+                        <h3>Pendientes</h3>
+                        <p id="total-pendientes">0</p>
+                    </div>
 
-    <h3>Solicitudes registradas</h3>
-    
-<div class="buscador-solicitudes">
-    <label for="buscar-solicitud">
-        Buscar por nombre o correo:
-    </label>
+                    <div class="resumen-tarjeta atendida">
+                        <h3>Atendidas</h3>
+                        <p id="total-atendidas">0</p>
+                    </div>
+                </div>
 
-    <input
-        type="search"
-        id="buscar-solicitud"
-        placeholder="Escribe el nombre o correo del cliente..."
-    >
-</div>
+                <h3>Solicitudes registradas</h3>
 
-    <div id="lista-solicitudes"></div>
-</section>
+                <div class="buscador-solicitudes">
+                    <label for="buscar-solicitud">
+                        Buscar por nombre o correo:
+                    </label>
 
+                    <input type="search" id="buscar-solicitud"
+                           placeholder="Escribe el nombre o correo del cliente...">
+                </div>
+
+                <div id="lista-solicitudes"></div>
+            </div>
         </section>
     </main>
 
@@ -143,6 +201,11 @@
         <p>Centro Juan Bosco Obrero</p>
     </footer>
 
+    <!-- Biblioteca oficial de Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Código de nuestra página -->
     <script src="script.js"></script>
 </body>
 </html>
+```
