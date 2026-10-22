@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte TIC Comunitario</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Soporte TIC Comunitario</h1>
+        <img src="imagenes/mantenimiento.jpg"
+             alt="Mantenimiento de computadores"
+             class="imagen-principal">
+        <p>Mantenimiento, tecnología y aprendizaje para todos</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <main>
+        <section id="inicio">
+            <h2>Bienvenidos a nuestro proyecto</h2>
+            <p>
+                Somos un proyecto de soporte técnico comunitario
+                enfocado en el mantenimiento preventivo y correctivo
+                de computadores y dispositivos tecnológicos en
+                Ciudad Bolívar, Bogotá.
+            </p>
+            <a class="boton" href="#servicios">
+                Conoce nuestros servicios
+            </a>
+        </section>
+
+        <section id="servicios">
+            <h2>Nuestros servicios</h2>
+
+            <div class="contenedor-servicios">
+                <div class="tarjeta">
+                    <h3>🧹 Mantenimiento preventivo</h3>
+                    <p>Realizamos limpieza y revisión de los equipos para prevenir fallas.</p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>🔧 Diagnóstico y reparación</h3>
+                    <p>Identificamos problemas de hardware y software para buscar soluciones.</p>
+                </div>
+
+                <div class="tarjeta">
+                    <h3>💻 Optimización de equipos</h3>
+                    <p>Ayudamos a mejorar el rendimiento y funcionamiento de los computadores.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="objetivos">
+            <h2>Nuestro objetivo</h2>
+            <p>
+                Brindar soporte técnico para mejorar el rendimiento
+                de los equipos, prolongar su vida útil y promover
+                el cuidado responsable de la tecnología.
+            </p>
+        </section>
+
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <p>¿Necesitas ayuda con tu computador? Escríbenos.</p>
+
+            <form class="formulario">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre"
+                       placeholder="Escribe tu nombre" required>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo"
+                       placeholder="ejemplo@correo.com" required>
+
+                <label for="servicio">Servicio que necesitas:</label>
+                <select id="servicio" name="servicio" required>
+                    <option value="">Selecciona un servicio</option>
+                    <option>Mantenimiento preventivo</option>
+                    <option>Diagnóstico y reparación</option>
+                    <option>Optimización de equipos</option>
+                </select>
+
+                <label for="mensaje">Cuéntanos qué problema tienes:</label>
+                <textarea id="mensaje" name="mensaje" rows="4"
+                          placeholder="Describe tu solicitud" required></textarea>
+
+                <button type="submit">Enviar solicitud</button>
+            </form>
+
+            
+<section id="panel-administrativo">
+    <h2>Panel administrativo</h2>
+    <p>Consulta y administra las solicitudes de los clientes.</p>
+
+    <div class="resumen-solicitudes">
+        <div class="resumen-tarjeta">
+            <h3>Total de solicitudes</h3>
+            <p id="total-solicitudes">0</p>
+        </div>
+
+        <div class="resumen-tarjeta pendiente">
+            <h3>Pendientes</h3>
+            <p id="total-pendientes">0</p>
+        </div>
+
+        <div class="resumen-tarjeta atendida">
+            <h3>Atendidas</h3>
+            <p id="total-atendidas">0</p>
+        </div>
+    </div>
+
+    <h3>Solicitudes registradas</h3>
+    
+<div class="buscador-solicitudes">
+    <label for="buscar-solicitud">
+        Buscar por nombre o correo:
+    </label>
+
+    <input
+        type="search"
+        id="buscar-solicitud"
+        placeholder="Escribe el nombre o correo del cliente..."
+    >
+</div>
+
+    <div id="lista-solicitudes"></div>
+</section>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Proyecto de Soporte TIC Comunitario</p>
+        <p>Centro Juan Bosco Obrero</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

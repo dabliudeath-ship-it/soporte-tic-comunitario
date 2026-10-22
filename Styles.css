@@ -1,0 +1,458 @@
+
+/* Diseño general de la página */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f6fc;
+    color: #263447;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    background-color: #102a43;
+    color: rgb(247, 242, 242);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+
+/* Menú de navegación */
+nav {
+    background-color: #0879bd;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffe082;
+}
+
+/* Contenido principal */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000010;
+}
+
+h2 {
+    color: #0879bd;
+}
+
+/* Botón */
+.boton {
+    display: inline-block;
+    background-color: #0879bd;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.boton:hover {
+    background-color: #102a43;
+}
+
+/* Pie de página */
+footer {
+    background-color: #083f73;
+    color: rgb(174, 170, 170);
+    text-align: center;
+    padding: 25px;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 27px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px;
+    }
+
+    main {
+        padding: 0 12px;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
+/* Imagen principal */
+.imagen-principal {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+}
+/* Tarjetas de servicios */
+.contenedor-servicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.tarjeta {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
+    flex: 1 1 250px;
+    max-width: 350px;
+    text-align: center;
+}
+
+.tarjeta h3 {
+    color: #102a43;
+}
+
+.tarjeta p {
+    color: #526477;
+}
+/* Formulario de contacto */
+.formulario {
+    max-width: 550px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.formulario button {
+    background-color: #102a43;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: #245b83;
+}
+
+
+/* ===== MEJORAS VISUALES: SOPORTE TIC COMUNITARIO ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f3f6fb;
+    color: #263445;
+    line-height: 1.6;
+}
+
+/* ENCABEZADO */
+
+header {
+    background: linear-gradient(135deg, #12345a, #087eaa);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    margin: 0 0 12px;
+    font-size: 2.2rem;
+}
+
+header p {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+}
+
+.imagen-principal {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    max-height: 340px;
+    object-fit: cover;
+    margin: 20px auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+}
+
+/* MENÚ DE NAVEGACIÓN */
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+}
+
+nav a {
+    color: #123f68;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 9px 16px;
+    border-radius: 8px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+nav a:hover {
+    background-color: #123f68;
+    color: white;
+}
+
+/* CONTENIDO PRINCIPAL */
+
+main {
+    width: 92%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+section {
+    background-color: white;
+    margin-bottom: 25px;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(30, 60, 90, 0.07);
+    scroll-margin-top: 20px;
+}
+
+section h2 {
+    color: #123f68;
+    margin-top: 0;
+    border-bottom: 3px solid #13a6b5;
+    padding-bottom: 10px;
+}
+
+/* BOTÓN PRINCIPAL */
+
+.boton {
+    display: inline-block;
+    background-color: #087eaa;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.boton:hover {
+    background-color: #075d80;
+}
+
+/* TARJETAS DE SERVICIOS */
+
+.contenedor-servicios {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 22px;
+}
+
+.tarjeta {
+    background: #f7fbff;
+    border: 1px solid #dce8f2;
+    border-top: 4px solid #13a6b5;
+    border-radius: 12px;
+    padding: 22px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(18, 63, 104, 0.12);
+}
+
+.tarjeta h3 {
+    color: #123f68;
+    margin-top: 0;
+}
+
+/* FORMULARIO */
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.formulario label {
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #263445;
+    font: inherit;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    outline: 2px solid #13a6b5;
+    border-color: #087eaa;
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+.formulario button {
+    background-color: #087eaa;
+    color: white;
+    border: none;
+    padding: 13px;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.formulario button:hover {
+    background-color: #075d80;
+}
+
+/* SOLICITUDES REGISTRADAS */
+
+#lista-solicitudes > div {
+    background-color: #f7fbff;
+    border: 1px solid #dce8f2;
+    border-left: 4px solid #13a6b5;
+    border-radius: 9px;
+    padding: 15px;
+    margin: 12px 0;
+    overflow-wrap: anywhere;
+}
+
+#lista-solicitudes h4 {
+    color: #123f68;
+    margin: 0 0 8px;
+}
+
+#lista-solicitudes p {
+    margin: 5px 0;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    background-color: #12345a;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 35px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    main {
+        width: 94%;
+        margin: 18px auto;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .contenedor-servicios {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+    }
+
+    .imagen-principal {
+        max-height: 250px;
+    }
+}
+
+/* Botones de gestión de solicitudes */
+
+#lista-solicitudes button {
+    padding: 9px 13px;
+    margin: 5px 8px 5px 0;
+    border: none;
+    border-radius: 7px;
+    background-color: #087eaa;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#lista-solicitudes button:hover {
+    opacity: 0.85;
+}
+
+#lista-solicitudes button:last-child {
+    background-color: #c0392b;
+}
